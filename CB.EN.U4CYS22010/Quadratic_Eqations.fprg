@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aadhithya"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:13:22 AM"/>
+        <attribute name="created" value="QWFkaGl0aHlhO0xBUFRPUC0xT0VISEFRODsyMDIyLTExLTA0OzA5OjI4OjQzIEFNOzMyMjg="/>
+        <attribute name="edited" value="QWFkaGl0aHlhO0xBUFRPUC0xT0VISEFRODsyMDIyLTExLTA0OzEwOjEzOjIyIEFNOzM7MzMyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <comment text="2 Variables and the constant"/>
+            <declare name="R1" type="Real" array="False" size=""/>
+            <declare name="R2" type="Real" array="False" size=""/>
+            <comment text="2 Roots"/>
+            <output expression="&quot;Enter the value of the co-efficient of x^2&quot;" newline="True"/>
+            <input variable="A"/>
+            <output expression="&quot;Enter the value of the co-efficient of x&quot;" newline="True"/>
+            <input variable="B"/>
+            <output expression="&quot;Enter the value of the constant&quot;" newline="True"/>
+            <input variable="C"/>
+            <comment text="Entering the declared variable values"/>
+            <assign variable="R1" expression="(-B+((B^2)-(4*A*C))^(1/2))/2*A"/>
+            <assign variable="R2" expression="(-B-((B^2)-(4*A*C))^(1/2))/2*A"/>
+            <comment text="Calculation of both variables"/>
+            <output expression="&quot;R1: &quot;&amp;&#13;&#10;R1" newline="True"/>
+            <output expression="&quot;R2: &quot;&amp;&#13;&#10;R2" newline="True"/>
+            <comment text="Declaring roots"/>
+        </body>
+    </function>
+</flowgorithm>

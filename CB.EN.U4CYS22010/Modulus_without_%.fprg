@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aadhithya"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:42:04 AM"/>
+        <attribute name="created" value="QWFkaGl0aHlhO0xBUFRPUC0xT0VISEFRODsyMDIyLTExLTA0OzEwOjEzOjM1IEFNOzMyMTU="/>
+        <attribute name="edited" value="QWFkaGl0aHlhO0xBUFRPUC0xT0VISEFRODsyMDIyLTExLTA0OzEwOjQyOjA0IEFNOzE7MzMyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Dividend" type="Integer" array="False" size=""/>
+            <declare name="Divisor" type="Integer" array="False" size=""/>
+            <declare name="Med" type="Integer" array="False" size=""/>
+            <declare name="Modulus" type="Integer" array="False" size=""/>
+            <comment text="Declaring Variables"/>
+            <output expression="&quot;Enter the Dividend&quot;" newline="True"/>
+            <input variable="Dividend"/>
+            <output expression="&quot;Enter the Divisor&quot;" newline="True"/>
+            <input variable="Divisor"/>
+            <comment text="Input Variables"/>
+            <assign variable="Med" expression="(Dividend/Divisor)"/>
+            <assign variable="Modulus" expression="((Divisor*Med)-Dividend)*(-1)"/>
+            <comment text="Calculation"/>
+            <output expression="&quot;The Modulus for entered numbers is: &quot;&amp; Modulus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

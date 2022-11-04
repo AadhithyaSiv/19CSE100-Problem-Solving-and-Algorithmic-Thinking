@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aadhithya"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:13:00 AM"/>
+        <attribute name="created" value="QWFkaGl0aHlhO0xBUFRPUC0xT0VISEFRODsyMDIyLTExLTA0OzA5OjU5OjAzIEFNOzMyMjg="/>
+        <attribute name="edited" value="QWFkaGl0aHlhO0xBUFRPUC0xT0VISEFRODsyMDIyLTExLTA0OzEwOjEzOjAwIEFNOzE7MzMxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Number1" type="Integer" array="False" size=""/>
+            <declare name="Number2" type="Integer" array="False" size=""/>
+            <comment text="Declaring the variables"/>
+            <output expression="&quot;Enter Number 1&quot;" newline="True"/>
+            <input variable="Number1"/>
+            <output expression="&quot;Enter Number 2&quot;" newline="True"/>
+            <input variable="Number2"/>
+            <comment text="Input for variables"/>
+            <assign variable="Number1" expression="Number1+Number2"/>
+            <assign variable="Number2" expression="Number1-Number2"/>
+            <assign variable="Number1" expression="Number1-Number2"/>
+            <comment text="Calculation"/>
+            <output expression="&quot;The numbers have been swapped&quot;" newline="True"/>
+            <output expression="&quot;Number 1 is &quot;&amp; Number1" newline="True"/>
+            <output expression="&quot;Number 2 is &quot;&amp; Number2" newline="True"/>
+            <comment text="Output"/>
+        </body>
+    </function>
+</flowgorithm>
