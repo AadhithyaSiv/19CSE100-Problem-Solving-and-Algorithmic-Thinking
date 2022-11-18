@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aadhithya"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-22 10:12:27 AM"/>
+        <attribute name="created" value="QWFkaGl0aHlhO0xBUFRPUC0xT0VISEFRODsyMDIyLTExLTIyOzA5OjA5OjAzIEFNOzMyMjM="/>
+        <attribute name="edited" value="QWFkaGl0aHlhO0xBUFRPUC0xT0VISEFRODsyMDIyLTExLTIyOzEwOjEyOjI3IEFNOzQ7MzMyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Bal" type="Integer" array="False" size=""/>
+            <declare name="Acc" type="Integer" array="False" size=""/>
+            <declare name="Choice" type="Integer" array="False" size=""/>
+            <declare name="Amt" type="Integer" array="False" size=""/>
+            <declare name="Out" type="Integer" array="False" size=""/>
+            <declare name="Pin" type="Integer" array="False" size=""/>
+            <declare name="Pin2" type="Integer" array="False" size=""/>
+            <declare name="BD" type="Integer" array="False" size=""/>
+            <declare name="BM" type="Integer" array="False" size=""/>
+            <declare name="BY" type="Integer" array="False" size=""/>
+            <comment text="Declaring Variables"/>
+            <output expression="&quot;Please enter your Account Number.&quot;" newline="True"/>
+            <input variable="Acc"/>
+            <comment text="Account number"/>
+            <output expression="&quot;Please enter your birth year in the format YYYY&quot;" newline="True"/>
+            <input variable="BY"/>
+            <output expression="&quot;Please enter your birth month in the format MM&quot;" newline="True"/>
+            <input variable="BM"/>
+            <output expression="&quot;Please enter your birth day in the format DD&quot;" newline="True"/>
+            <input variable="BD"/>
+            <assign variable="Pin" expression="BD+BM+BY"/>
+            <comment text="Pin calculation"/>
+            <output expression="&quot;Please enter your pin which is the sum of your birth day month and year (you will be required to remember this pin next time)&quot;" newline="True"/>
+            <input variable="Pin2"/>
+            <comment text="Pin input"/>
+            <if expression="Pin2=Pin">
+                <then>
+                    <output expression="&quot;Please enter your bank balance.&quot;" newline="True"/>
+                    <input variable="Bal"/>
+                    <comment text="Balance input"/>
+                    <if expression="Bal&gt;500">
+                        <then>
+                            <comment text="Balance more than 500&#13;&#10;"/>
+                            <output expression="&quot;Press 1 to withdraw&quot;" newline="True"/>
+                            <output expression="&quot;Press 2 to deposit&quot;" newline="True"/>
+                            <input variable="Choice"/>
+                            <comment text="Choice of action"/>
+                            <if expression="Choice=1">
+                                <then>
+                                    <comment text="WIthdrawal"/>
+                                    <output expression="&quot;Enter withdrawal amount&quot;" newline="True"/>
+                                    <input variable="Amt"/>
+                                    <assign variable="Out" expression="Bal-Amt"/>
+                                    <output expression="&quot;Account No: &quot;&amp;&#13;&#10;Acc" newline="True"/>
+                                    <output expression="&quot;You have withdrawn $&quot;&amp;&#13;&#10;Amt" newline="True"/>
+                                    <output expression="&quot;Your balance is $&quot;&amp;&#13;&#10;Out" newline="True"/>
+                                    <output expression="&quot;Thank you for banking with us&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="Choice=2">
+                                        <then>
+                                            <comment text="Deposit"/>
+                                            <output expression="&quot;Enter Deposit amount&quot;" newline="True"/>
+                                            <input variable="Amt"/>
+                                            <assign variable="Out" expression="Bal+Amt"/>
+                                            <output expression="&quot;Account No: &quot;&amp;&#13;&#10;Acc" newline="True"/>
+                                            <output expression="&quot;You have deposited $&quot;&amp;&#13;&#10;Amt" newline="True"/>
+                                            <output expression="&quot;Your balance is $&quot;&amp;&#13;&#10;Out" newline="True"/>
+                                            <output expression="&quot;Thank you for banking with us&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Invalid input, Please re-try&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="Bal&gt;30">
+                                <then>
+                                    <comment text="Balance less than 500&#13;&#10;"/>
+                                    <output expression="&quot;withdraw unavailable&quot;" newline="True"/>
+                                    <output expression="&quot;Press 2 to deposit&quot;" newline="True"/>
+                                    <input variable="Choice"/>
+                                    <comment text="Choice of action"/>
+                                    <if expression="Choice=2">
+                                        <then>
+                                            <comment text="Deposit"/>
+                                            <output expression="&quot;Enter Deposit amount&quot;" newline="True"/>
+                                            <input variable="Amt"/>
+                                            <assign variable="Out" expression="Bal+Amt"/>
+                                            <output expression="&quot;Account No: &quot;&amp;&#13;&#10;Acc" newline="True"/>
+                                            <output expression="&quot;You have deposited $&quot;&amp;&#13;&#10;Amt" newline="True"/>
+                                            <output expression="&quot;Your balance is $&quot;&amp;&#13;&#10;Out" newline="True"/>
+                                            <output expression="&quot;Thank you for banking with us&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Invalid input, Please re-try&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <comment text="for invalid bank balance"/>
+                                    <output expression="&quot;Bank account cannot have less than $30&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Wrong pin please re-try&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Bank of Amrita.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
