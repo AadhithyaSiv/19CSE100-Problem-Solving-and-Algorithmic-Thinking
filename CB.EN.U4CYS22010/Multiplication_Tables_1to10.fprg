@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aadhithya"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:56:48 AM"/>
+        <attribute name="created" value="QWFkaGl0aHlhO0xBUFRPUC0xT0VISEFRODsyMDIyLTEyLTAyOzA5OjE3OjU4IEFNOzMyMzE="/>
+        <attribute name="edited" value="QWFkaGl0aHlhO0xBUFRPUC0xT0VISEFRODsyMDIyLTEyLTAyOzA5OjU2OjQ4IEFNOzI7MzM0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="0"/>
+            <declare name="y" type="Integer" array="False" size=""/>
+            <assign variable="y" expression="0"/>
+            <declare name="z" type="Integer" array="False" size=""/>
+            <while expression="x&lt;10">
+                <assign variable="x" expression="x+1"/>
+                <while expression="y&lt;10">
+                    <assign variable="y" expression="y+1"/>
+                    <assign variable="z" expression="x*y"/>
+                    <output expression="x&amp;&#13;&#10;&quot; X &quot;&amp;&#13;&#10;y&amp;&#13;&#10;&quot; = &quot;&amp;&#13;&#10;z" newline="True"/>
+                </while>
+                <assign variable="y" expression="y-y"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
